@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" maxHeight="150.0" maxWidth="330.0" minHeight="150.0" minWidth="330.0" prefHeight="150.0" prefWidth="330.0" vgap="15.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.gabrielecano.base64decoder.Controller">
+    <columnConstraints>
+        <ColumnConstraints maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="32.0" minHeight="0.0" prefHeight="17.0" />
+        <RowConstraints maxHeight="42.0" minHeight="14.0" prefHeight="17.0" />
+        <RowConstraints maxHeight="17.0" minHeight="17.0" prefHeight="17.0" />
+        <RowConstraints maxHeight="17.0" minHeight="17.0" prefHeight="30.0" />
+    </rowConstraints>
+   <children>
+       <GridPane maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="300.0" GridPane.rowIndex="1">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+          <children>
+              <Button fx:id="copyButton" disable="true" focusTraversable="false" maxHeight="25.0" maxWidth="70.0" minHeight="25.0" minWidth="70.0" mnemonicParsing="false" onAction="#copyPressed" prefHeight="25.0" prefWidth="70.0" text="Copy" GridPane.columnIndex="1">
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </Button>
+              <Label fx:id="textOutput" maxWidth="227.0" minWidth="227.0" prefWidth="227.0" />
+          </children>
+       </GridPane>
+       <GridPane minWidth="300.0">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="225.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" percentWidth="0.0" prefWidth="10.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.0" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <GridPane.margin>
+               <Insets />
+           </GridPane.margin>
+          <children>
+            <Button fx:id="encodeButton" maxWidth="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#encodePressed" prefWidth="30.0" text="E" GridPane.columnIndex="4" />
+              <Button fx:id="decodeButton" focusTraversable="false" maxHeight="25.0" minHeight="25.0" mnemonicParsing="false" onAction="#decodePressed" prefHeight="25.0" prefWidth="62.0" text="D" GridPane.columnIndex="2">
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </Button>
+              <TextField fx:id="textInput" prefHeight="30.0" prefWidth="114.0" promptText="Base64 String" />
+          </children>
+       </GridPane>
+       <Button fx:id="openInBroswerButton" disable="true" focusTraversable="false" maxHeight="25.0" maxWidth="300.0" minHeight="25.0" minWidth="300.0" mnemonicParsing="false" onAction="#openInBroswerPressed" prefHeight="25.0" prefWidth="300.0" text="Open in broswer" GridPane.rowIndex="2">
+           <GridPane.margin>
+               <Insets top="5.0" />
+           </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+       </Button>
+       <Label fx:id="infoLabel" text="Please Enter a Base64 Encoded Text" GridPane.rowIndex="3" />
+   </children>
+</GridPane>
